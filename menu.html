@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+                
+            .navbar {
+            overflow: hidden;
+            background-color: #750E21;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            }
+
+            .navbar-right {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 25px 14px 25px;
+            text-decoration: none;
+            font-size: 17px;
+            right: 20%;
+            }
+
+            .navbar a.logo{
+            color: white;
+            float: left;
+            font-size: 30px;
+            text-align: center;
+            text-decoration: none;
+            padding: 7px 150px 5px 100px;
+            }
+
+            .navbar-right:hover {
+            background: #ddd;
+            color: black;
+            text-decoration: underline;
+            
+            }
+
+            /* Center website */
+            .main {
+            padding-top: 50px;
+            max-width: 1000px;
+            margin: auto;
+            }
+
+            h1 {
+            font-size: 50px;
+            word-break: break-all;
+            }
+
+            .row {
+            margin: 10px -16px;
+            }
+
+            /* Add padding BETWEEN each column */
+            .row,
+            .row > .column {
+            padding: 8px;
+            }
+
+            /* Create three equal columns that floats next to each other */
+            .column {
+            float: left;
+            width: 33.33%;
+            display: none; /* Hide all elements by default */
+            }
+
+            /* Clear floats after rows */ 
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            float: center;
+            }
+
+            /* Content */
+            .content {
+            background-color: white;
+            padding: 50px 0px 0px 0px;
+            }
+
+            /* The "show" class is added to the filtered elements */
+            .show {
+            display: block;
+            }
+
+            /* Style the buttons */
+            .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+            }
+
+            .btn:hover {
+            background-color: #ddd;
+            }
+
+            .btn.active {
+            background-color: #666;
+            color: white;
+            }
+
+            /* Style the footer */
+            .footer {
+                background-color:#750E21;
+                padding: 10px;
+                text-align: center;
+                color:#f2f2f2;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <!--NAVIGATION MENU-->   
+        <div class="navbar">
+            <a href="" class="logo">ButterBall Cakes</a>
+            <a href="#contact" class="navbar-right"><img href=""></a>
+            <a href="#contact" class="navbar-right">CONTACT</a>
+            <a href="menu.html" class="navbar-right">MENU</a>
+            <a href="about.html" class="navbar-right">ABOUT</a>
+            <a href="landingpage-BB.html" class="navbar-right">HOME</a>
+        </div>
+
+        <!-- MAIN (Center website) -->
+        <div class="main">
+
+        <h1>MENU ITEMS</h1>
+        <hr>
+        <h3>Filter</h3>
+        <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> All Cakes</button>
+        <button class="btn" onclick="filterSelection('nature')"> Classic cakes</button>
+        <button class="btn" onclick="filterSelection('cars')"> Birthday cakes</button>
+        <button class="btn" onclick="filterSelection('people')"> Special Delights</button>
+        </div>
+
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+        <div class="column nature">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\classic1.jpg" alt="Mountains" style="width: 300px; height:200px">
+            <h4>Classic Sponge Cake</h4>
+            <p>Price: Rs 500</p>
+            </div>
+        </div>
+        <div class="column nature">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\classic3.jpg" alt="Nature" style="width: 300px; height: 200px">
+            <h4>Honey cake</h4>
+            <p>Price: Rs 500</p>
+            </div>
+        </div>
+        <div class="column nature">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\classic2.webp" alt="Lights" style="width: 300px; height: 200px" >
+            <h4>Taiwanese Sponge Cake</h4>
+            <p>Price: Rs 700</p>
+            </div>
+        </div>
+
+        
+        <div class="column cars">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\cake3.jpg" alt="Car" style="width: 300px; height: 400px">
+            <h4>Blackcurrentlayer cake</h4>
+            <p>Price: Rs 999</p>
+            </div>
+        </div>
+        <div class="column cars">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\cake1.jpg" alt="Car" style="width: 300px; height: 400px">
+            <h4>vanilla Layer cake</h4>
+            <p>Price: Rs 799</p>
+            </div>
+        </div>
+        <div class="column cars">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\cake4.webp" alt="Car" style="width: 300px; height: 400px">
+            <h4>Blue Berry layer Cake</h4>
+            <p>Price: Rs 899</p>
+            </div>
+        </div>
+
+        <div class="column people">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\tira1.jpg" alt="Car" style="width: 300px; height: 250px">
+            <h4>Tiramisu Slice</h4>
+            <p>Price: Rs 199</p>
+            </div>
+        </div>
+        <div class="column people">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\brow.jpg" alt="Car" style="width: 300px; height: 250px">
+            <h4>Brownie hamper</h4>
+            <p>Price: Rs 699</p>
+            </div>
+        </div>
+        <div class="column people">
+            <div class="content">
+            <img src="D:\\Personal\\Prodigy Web dev intern\\Task- 1\\images\\cup.webp" alt="Car" style="width: 300px; height: 250px">
+            <h4>Cupcake hamper</h4>
+            <p>Price: Rs 599</p>
+            </div>
+        </div>
+        <!-- END GRID -->
+        </div>
+
+        <!-- END MAIN -->
+        </div>
+
+        <script>
+        filterSelection("all")
+        function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+        }
+
+        function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+        }
+
+        function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+        }
+        element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+        }
+        </script>
+
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+
+    </body>
+</html>
